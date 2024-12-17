@@ -1,0 +1,231 @@
+/* Reset dan dasar styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Header dan Judul */
+header, h2, h3 {
+    text-align: center;
+    color: #007bff; /* Warna Biru */
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+/* Sidebar di sebelah kanan */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Main Content Area */
+.main-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-right: 250px; /* Offset for sidebar */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+table a:hover {
+    color: #2980b9;
+}
+
+/* Formulir */
+form {
+    width: 350px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Tombol Logout */
+.logout-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #ff4d4d; /* Merah terang */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+    background-color: #e60000; /* Merah lebih gelap */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:active {
+    background-color: #b30000; /* Merah lebih dalam saat ditekan */
+}
+
+/* Tampilan Responsif */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+}
+/* Galeri Foto Kegiatan Sekolah */
+.activities-gallery {
+    margin-top: 20px;
+}
+
+.activities-gallery h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+}
+
